@@ -1,0 +1,21 @@
+# Build theanorc
+# command: vim ~/.theanorc
+
+[cuda]
+root = /path/to/cuda/root
+
+[nvcc]
+flags = -D_FORCE_INLINES
+fastmath = true
+
+[global]
+device = gpu0
+floatX = float32
+
+# By default the compiled files were being written to my local network drive.
+# Since I have limited space on this drive (on a school's network),
+# we can change the path to compile the files on the local machine.
+# You will have to create the directories and modify according to where you
+# want to install the files.
+# Uncomment if you want to change the default path to your own.
+# base_compiledir = /local-scratch/jer/theano/
